@@ -6,8 +6,8 @@ type ModalProps = {
   onClose: () => void;
   kinder: {
     ADDR: string;
-    lng: number;
-    lat: number;
+    // lng: number;
+    // lat: number;
   };
   children: React.ReactNode;
 };

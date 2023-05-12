@@ -140,6 +140,7 @@ const KinderList = () => {
                     <DetailModal
                       isOpen={modalState?.isOpen}
                       onClose={() => handleModalClose(index)}
+                      kinder={kinder} // kinder prop 추가
                       key={`modal-${index}`}
                     >
                       {modalState?.isExpanded ? (
