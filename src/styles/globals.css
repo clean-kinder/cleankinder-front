@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.header_right_btn {
+  @apply
+  inline-flex items-center px-3 py-1
+   /* mt-4 */
+   text-white transition duration-100 ease-out transform bg-purple-500 border-0 cursor-pointer hover:shadow-lg active:scale-95 rounded-xl focus:outline-none hover:bg-purple-300 hover:text-purple-700 hover:md:mt-0
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.detail_map_btn {
+  @apply
+  inline-flex items-center px-3 py-1
+   /* mt-4 */
+   text-black transition duration-100 ease-out transform bg-gray-300 border-0 cursor-pointer hover:shadow-lg active:scale-95 rounded-xl focus:outline-none hover:bg-gray-500 hover:text-gray-300 hover:md:mt-0
+   
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.detail_text {
+  font-size: 12px;
+}
+
+.pagination-number {
+  margin-right: 10px;
+}
+
+.modal_border {
+  width: 500px;
+  height: 200px;
+  margin-left: 30px;
+  border-color: #333436;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.page-number {
+  margin-right: 10px; /* 페이지 번호 사이의 간격을 조정합니다 */
+  color: black; /* 일반 페이지 번호의 색상을 설정합니다 */
+  cursor: pointer;
+}
+
+.page-number.active {
+  color: rgb(254, 212, 0); /* 선택된 페이지 번호의 색상을 설정합니다 */
+}
+
+.map-container {
+  height: 400px; /* 지도의 높이를 조정합니다 */
 }
