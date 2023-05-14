@@ -15,7 +15,7 @@ type KinderInfo = {
 };
 
 type SeoulDataResponse = {
-  childSchoolHygiene_ys: {
+  childSchoolHygiene_gb: {
     list_total_count: number;
     RESULT: {
       CODE: string;
@@ -55,8 +55,8 @@ const KinderList = () => {
       setLoading(true);
       const response = await axios.get(`/api/${local}`);
       console.log("Success!");
-      setData(response.data);
       console.log(response.data);
+      setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -94,7 +94,7 @@ const KinderList = () => {
   // Pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data?.childSchoolHygiene_ys?.row?.slice(
+  const currentItems = data?.childSchoolHygiene_gb?.row?.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
@@ -104,9 +104,9 @@ const KinderList = () => {
   };
 
   const renderPageNumbers = () => {
-    if (data && data.childSchoolHygiene_ys && data.childSchoolHygiene_ys.row) {
+    if (data && data.childSchoolHygiene_gb && data.childSchoolHygiene_gb.row) {
       const totalPages = Math.ceil(
-        data.childSchoolHygiene_ys.row.length / itemsPerPage
+        data.childSchoolHygiene_gb.row.length / itemsPerPage
       );
       const pageNumbers = [];
       const visiblePageRange = 2; // 원하는 페이지 번호 간격을 설정합니다
@@ -136,9 +136,9 @@ const KinderList = () => {
       <h1>{local}</h1>
       <br />
       <br />
-      {data && data.childSchoolHygiene_ys && data.childSchoolHygiene_ys.row && (
+      {data && data.childSchoolHygiene_gb && data.childSchoolHygiene_gb.row && (
         <ul>
-          {data.childSchoolHygiene_ys.row.map((kinder, index) => (
+          {data.childSchoolHygiene_gb.row.map((kinder, index) => (
             <li key={index}>{kinder.KINDERNAME}</li>
           ))}
         </ul>
@@ -148,8 +148,8 @@ const KinderList = () => {
         <p>Loading data...</p>
       ) : (
         data &&
-        data.childSchoolHygiene_ys &&
-        data.childSchoolHygiene_ys.row && (
+        data.childSchoolHygiene_gb &&
+        data.childSchoolHygiene_gb.row && (
           <>
             <ul>
               {currentItems?.map((kinder, index) => {
