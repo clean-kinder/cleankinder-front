@@ -202,7 +202,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/dongjak-list"
+              href="/kinder-list/dj"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
@@ -218,7 +218,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/sd"
+              href="/kinder-list/sm"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
@@ -274,7 +274,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/yongsan-list"
+              href="/kinder-list/ys"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
@@ -282,7 +282,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/eunpyeong-list"
+              href="/kinder-list/ep"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
@@ -290,7 +290,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/jongno-list"
+              href="/kinder-list/jn"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
@@ -298,7 +298,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/jung-list"
+              href="/kinder-list/jg"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
@@ -306,7 +306,7 @@ const SideNavbar = (props: Props) => {
             </Link>
             <hr className="border-1" />
             <Link
-              href="/kinder-list/jungnang-list"
+              href="/kinder-list/jr"
               className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
             >
               <SmileIcon class="mr-3" />
