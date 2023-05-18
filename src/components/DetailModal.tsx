@@ -4,17 +4,17 @@ import mapboxgl from "mapbox-gl";
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  kinder: {
-    ADDR: string;
-    // lng: number;
-    // lat: number;
-  };
+  // kinder: {
+  //   ADDR: string;
+  //   lng: number;
+  //   lat: number;
+  // };
   children: React.ReactNode;
 };
 
-const DetailModal = ({ isOpen, onClose, kinder, children }: ModalProps) => {
+const DetailModal = ({ isOpen, onClose, children }: ModalProps) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
-  
+
   return (
     <>
       {isOpen && (
@@ -29,7 +29,11 @@ const DetailModal = ({ isOpen, onClose, kinder, children }: ModalProps) => {
               onClick={onClose}
               className="float-right w-6 h-6 cursor-pointer modal-close-button"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
 
             {/* <div className="map-container" ref={mapContainerRef}></div> */}
