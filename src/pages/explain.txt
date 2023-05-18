@@ -1,2 +1,0 @@
-파일명은 kebab-case로 작성해주세요. (URL 때문)
-함수명은 평범하게 PascalCase로 작성해주세요.
