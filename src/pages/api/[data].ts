@@ -30,7 +30,7 @@ export default async function dataHandler(
   try {
     const responseData = await fetchData(url);
     res.status(200).json(responseData);
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
 }
