@@ -59,9 +59,9 @@ const KinderList = () => {
         data &&
         data[`childSchoolHygiene_${local}`] &&
         data[`childSchoolHygiene_${local}`].row && (
-          <ul className="grid grid-cols-3 grid-auto-rows-auto gap-16">
+          <ul className="grid grid-cols-3 gap-16 grid-auto-rows-auto">
             {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
-              <li key={index} className="border p-4">
+              <li key={index} className="p-4 m-4 kinder-block">
                 <p className="mb-2">
                   <strong>이름:</strong> {kinder.KINDERNAME}
                 </p>

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ImcreSoojin';
+  font-weight: 400;
+  src: url('../../public/fonts/GmarketSansTTFMedium.ttf') format("ttf");
+}
+
+body {
+  font-family: 'GmarketSansTTFMedium';
+}
+
 .header_right_btn {
   @apply
   inline-flex items-center px-3 py-1
@@ -50,4 +60,11 @@ h1 {
 
 .map-container {
   height: 400px; /* 지도의 높이를 조정합니다 */
+}
+
+.kinder-block {
+  @apply flex flex-col rounded-3xl
+  transition duration-300 transform border-2 border-yellow-500
+  hover:scale-105 hover:shadow-lg hover:bg-yellow-100
+  cursor-pointer
 }

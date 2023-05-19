@@ -41,10 +41,10 @@ const SideNavbar = (props: Props) => {
                 <HamburgerIcon class="" />
               </button>
               <div
-                className="flex items-center ml-3 text-2xl font-bold cursor-pointer"
+                className="flex items-center ml-3 text-2xl font-bold text-yellow-500 cursor-pointer"
                 onClick={() => router.push("/")}
               >
-                Home
+                우리아이의 유치원
               </div>
             </div>
 
@@ -69,20 +69,6 @@ const SideNavbar = (props: Props) => {
                                 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5
                                 focus:outline-none cursor-pointer`}
               >
-                <a
-                  href="#"
-                  className="flex items-center px-4 py-2 text-sm text-gray-700"
-                >
-                  <ProfileIcon class="mr-2" />
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center px-4 py-2 text-sm text-gray-700"
-                >
-                  <SettingsIcon class="mr-2" />
-                  Settings
-                </a>
                 <a
                   href="#"
                   className="flex items-center px-4 py-2 text-sm text-gray-700"
