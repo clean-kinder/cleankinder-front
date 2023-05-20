@@ -35,15 +35,13 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
 
   return (
     <div>
-      <LoadScript googleMapsApiKey='AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo'>
-        <GoogleMap
-          mapContainerStyle={mapStyles}
-          zoom={16}
-          center={location}
-        >
-          <MarkerF position={location}/>
-        </GoogleMap>
-      </LoadScript>
+      <GoogleMap
+        mapContainerStyle={mapStyles}
+        zoom={16}
+        center={location}
+      >
+        <MarkerF position={location}/>
+      </GoogleMap>
       <div className="p-1 border-2 m-0 w-96 h-64 p-3 bg-yellow-100">
         <ol className='font-semibold'>
           <li className='m-2'>유치원명 : {kinderName}</li>

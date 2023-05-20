@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getLocalName } from "./../../utils/localUtils";
 import Modal from "../../components/Modal";
+import { LoadScript } from '@react-google-maps/api';
 
 type KinderInfo = {
   KINDERNAME: string;
@@ -12,6 +13,11 @@ type KinderInfo = {
   FXTM_DSNF_CHK_RSLT_TP_CD: string;
   FXTM_DSNF_CHK_DT: string;
   MDST_CHK_DT: string;
+  ESTB_PT: string;
+  ILMN_CHK_DT: string;
+  TP_01: string;
+  TP_02: string;
+  TP_03: string;
 };
 
 type SeoulDataResponse = {
@@ -30,6 +36,15 @@ const KinderList = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter();
   const { local } = router.query;
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [selectedKinder, setSelectedKinder] = useState<KinderInfo | null>(null);
+
+  const handleClick = (kinder: KinderInfo) => {
+    setSelectedKinder(kinder);
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     if (local) {
@@ -52,6 +67,10 @@ const KinderList = () => {
   };
 
   return (
+    <LoadScript
+      id="script-loader"
+      googleMapsApiKey="AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo"
+    >
     <div className="h-full overflow-y-auto">
       <h1>{getLocalName(local as string)}</h1>
       {loading ? (
@@ -62,7 +81,40 @@ const KinderList = () => {
         data[`childSchoolHygiene_${local}`].row && (
           <ul className="grid grid-cols-3 grid-auto-rows-auto gap-16">
             {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
-              <li key={index} className="border p-4">
+              <li key={index} className="border p-4" onClick={() => handleClick(kinder)}>
+                {isOpen && selectedKinder === kinder && (
+                  <div style={{
+                    position: 'fixed',
+                    zIndex: 1,
+                    left: 0,
+                    top: 0,
+                    width: '100%',
+                    height: '100%',
+                    overflow: 'auto',
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    animation: 'slide-in 0.5s forwards'
+                  }}>
+                    <div style={{
+                      marginTop: '64px'
+                    }}>
+                      <Modal 
+                        address={kinder.ADDR}
+                        kinderName={kinder.KINDERNAME}
+                        kinderType={kinder.ESTB_PT}
+                        airDay={kinder.ARQL_CHK_DT}
+                        airResult={kinder.ARQL_CHK_RSLT_TP_CD}
+                        washDay={kinder.FXTM_DSNF_CHK_DT}
+                        washResult={kinder.FXTM_DSNF_CHK_RSLT_TP_CD}
+                        jodoDay={kinder.ILMN_CHK_DT}
+                        miniAir={kinder.MDST_CHK_DT}
+                        water_1={kinder.TP_01}
+                        water_2={kinder.TP_02}
+                        water_3={kinder.TP_03}
+                      />
+                    </div>
+                  </div>
+                )}
                 <p className="mb-2">
                   <strong>이름:</strong> {kinder.KINDERNAME}
                 </p>
@@ -78,11 +130,12 @@ const KinderList = () => {
                 </p>
                 {/* Add more fields as needed */}
               </li>
+              
             ))}
           </ul>
         )
       )}
-    </div>
+    </div></LoadScript>
   );
 };
 
