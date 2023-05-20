@@ -79,9 +79,9 @@ const KinderList = () => {
         data &&
         data[`childSchoolHygiene_${local}`] &&
         data[`childSchoolHygiene_${local}`].row && (
-          <ul className="grid grid-cols-3 grid-auto-rows-auto gap-16">
+          <ul className="grid grid-cols-3 gap-16 grid-auto-rows-auto">
             {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
-              <li key={index} className="border p-4" onClick={() => handleClick(kinder)}>
+              <li key={index} className="p-4 m-4 kinder-block" onClick={() => handleClick(kinder)}>
                 {isOpen && selectedKinder === kinder && (
                   <div style={{
                     position: 'fixed',

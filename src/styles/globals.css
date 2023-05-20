@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ImcreSoojin';
+  font-weight: 400;
+  src: url('../../public/fonts/GmarketSansTTFMedium.ttf') format("ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .header_right_btn {
   @apply
   inline-flex items-center px-3 py-1
