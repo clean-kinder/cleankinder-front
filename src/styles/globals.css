@@ -60,3 +60,21 @@ h1 {
     transform: translateX(0);
   }
 }
+
+@font-face {
+  font-family: 'ImcreSoojin';
+  font-weight: 400;
+  src: url('../../public/fonts/GmarketSansTTFMedium.ttf') format("ttf");
+}
+
+.kinder-block {
+  @apply flex flex-col rounded-3xl
+  transition duration-300 transform border-2 border-yellow-500
+  hover:scale-105 hover:shadow-lg hover:bg-yellow-100
+  cursor-pointer
+}
+
+body {
+  font-family: 'GmarketSansTTFMedium';
+}
+
