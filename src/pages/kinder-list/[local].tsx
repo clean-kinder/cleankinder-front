@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getLocalName } from "./../../utils/localUtils";
+import Modal from "../../components/Modal";
 
 type KinderInfo = {
   KINDERNAME: string;
