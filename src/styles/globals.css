@@ -79,8 +79,8 @@ h1 {
 
 .kinder-block {
   @apply flex flex-col rounded-3xl
-  transition duration-300 transform border-2 border-yellow-500
-  hover:scale-105 hover:shadow-lg hover:bg-yellow-100
+  border-2 border-yellow-500
+  hover:shadow-lg hover:bg-yellow-100
   cursor-pointer
 }
 

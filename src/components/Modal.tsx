@@ -34,7 +34,7 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
   }, [address]);
 
   return (
-    <div>
+    <div className='border-2 border-yellow-500 rounded-3xl p-3 bg-yellow-100'>
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={16}
@@ -42,7 +42,7 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
       >
         <MarkerF position={location}/>
       </GoogleMap>
-      <div className="p-1 border-2 m-0 w-96 h-64 p-3 bg-yellow-100">
+      <div className="p-1 m-0 w-96 h-64 p-3 bg-yellow-100">
         <ol className='font-semibold'>
           <li className='m-2'>유치원명 : {kinderName}</li>
           <li className='m-2'>설립유형 : {kinderType}</li>
