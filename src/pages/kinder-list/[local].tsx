@@ -37,14 +37,21 @@ const KinderList = () => {
   const router = useRouter();
   const { local } = router.query;
 
-  const [isOpen, setIsOpen] = useState(false);
+
 
   const [selectedKinder, setSelectedKinder] = useState<KinderInfo | null>(null);
 
-  const handleClick = (kinder: KinderInfo) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = (kinder: KinderInfo) => {
     setSelectedKinder(kinder);
-    setIsOpen(!isOpen);
-  };
+    setIsModalOpen(true);
+  }
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  }
 
   useEffect(() => {
     if (local) {
@@ -71,71 +78,74 @@ const KinderList = () => {
       id="script-loader"
       googleMapsApiKey="AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo"
     >
-    <div className="h-full overflow-y-auto">
-      <h1>{getLocalName(local as string)}</h1>
-      {loading ? (
-        <p>Loading data...</p>
-      ) : (
-        data &&
-        data[`childSchoolHygiene_${local}`] &&
-        data[`childSchoolHygiene_${local}`].row && (
-          <ul className="grid grid-cols-3 gap-16 grid-auto-rows-auto">
-            {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
-              <li key={index} className="p-4 m-4 kinder-block" onClick={() => handleClick(kinder)}>
-                {isOpen && selectedKinder === kinder && (
+      <div className="h-full overflow-y-auto">
+        <h1>{getLocalName(local as string)}</h1>
+        {loading ? (
+          <p>Loading data...</p>
+        ) : (
+          data &&
+          data[`childSchoolHygiene_${local}`] &&
+          data[`childSchoolHygiene_${local}`].row && (
+            <>
+              <ul className="grid grid-cols-3 gap-16 grid-auto-rows-auto">
+                {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
+                  <li key={index} className="p-4 m-4 kinder-block" onClick={() => handleModalOpen(kinder)}>
+                    <p className="mb-2">
+                      <strong>이름:</strong> {kinder.KINDERNAME}
+                    </p>
+                    <p className="mb-2">
+                      <strong>주소:</strong> {kinder.ADDR}
+                    </p>
+                    <p className="mb-2">
+                      <strong>실내공기질 점검일자:</strong> {kinder.ARQL_CHK_DT}
+                    </p>
+                    <p className="mb-2">
+                      <strong>실내공기질 점검결과:</strong>{" "}
+                      {kinder.ARQL_CHK_RSLT_TP_CD}
+                    </p>
+                    {/* Add more fields as needed */}
+                  </li>
+                ))}
+              </ul>
+              {isModalOpen && selectedKinder && (
+                <div style={{
+                  position: 'fixed',
+                  zIndex: 1,
+                  left: 0,
+                  top: 0,
+                  width: '100%',
+                  height: '100%',
+                  overflow: 'auto',
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                  animation: 'slide-in 0.5s forwards'
+                }}>
                   <div style={{
-                    position: 'fixed',
-                    zIndex: 1,
-                    left: 0,
-                    top: 0,
-                    width: '100%',
-                    height: '100%',
-                    overflow: 'auto',
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                    animation: 'slide-in 0.5s forwards'
+                    marginTop: '64px'
                   }}>
-                    <div style={{
-                      marginTop: '64px'
-                    }}>
-                      <Modal 
-                        address={kinder.ADDR}
-                        kinderName={kinder.KINDERNAME}
-                        kinderType={kinder.ESTB_PT}
-                        airDay={kinder.ARQL_CHK_DT}
-                        airResult={kinder.ARQL_CHK_RSLT_TP_CD}
-                        washDay={kinder.FXTM_DSNF_CHK_DT}
-                        washResult={kinder.FXTM_DSNF_CHK_RSLT_TP_CD}
-                        jodoDay={kinder.ILMN_CHK_DT}
-                        miniAir={kinder.MDST_CHK_DT}
-                        water_1={kinder.TP_01}
-                        water_2={kinder.TP_02}
-                        water_3={kinder.TP_03}
-                      />
-                    </div>
+                    <Modal
+                      isOpen={isModalOpen} 
+                      onClose={handleModalClose}
+                      address={selectedKinder.ADDR}
+                      kinderName={selectedKinder.KINDERNAME}
+                      kinderType={selectedKinder.ESTB_PT}
+                      airDay={selectedKinder.ARQL_CHK_DT}
+                      airResult={selectedKinder.ARQL_CHK_RSLT_TP_CD}
+                      washDay={selectedKinder.FXTM_DSNF_CHK_DT}
+                      washResult={selectedKinder.FXTM_DSNF_CHK_RSLT_TP_CD}
+                      jodoDay={selectedKinder.ILMN_CHK_DT}
+                      miniAir={selectedKinder.MDST_CHK_DT}
+                      water_1={selectedKinder.TP_01}
+                      water_2={selectedKinder.TP_02}
+                      water_3={selectedKinder.TP_03}
+                    />
                   </div>
-                )}
-                <p className="mb-2">
-                  <strong>이름:</strong> {kinder.KINDERNAME}
-                </p>
-                <p className="mb-2">
-                  <strong>주소:</strong> {kinder.ADDR}
-                </p>
-                <p className="mb-2">
-                  <strong>실내공기질 점검일자:</strong> {kinder.ARQL_CHK_DT}
-                </p>
-                <p className="mb-2">
-                  <strong>실내공기질 점검결과:</strong>{" "}
-                  {kinder.ARQL_CHK_RSLT_TP_CD}
-                </p>
-                {/* Add more fields as needed */}
-              </li>
-              
-            ))}
-          </ul>
-        )
-      )}
-    </div></LoadScript>
+                </div>
+              )}
+            </>
+          )
+        )}
+      </div></LoadScript>
   );
 };
 

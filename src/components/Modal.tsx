@@ -14,9 +14,11 @@ interface MapProps {
   water_1: string;
   water_2: string;
   water_3: string;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, airResult, washDay, washResult, jodoDay, miniAir, water_1, water_2, water_3 }) => {
+const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, airResult, washDay, washResult, jodoDay, miniAir, water_1, water_2, water_3, isOpen, onClose }) => {
   const [location, setLocation] = useState({ lat: 0, lng: 0 });
   const mapStyles = {        
     height: "250px",
@@ -34,7 +36,8 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
   }, [address]);
 
   return (
-    <div className='border-2 border-yellow-500 rounded-3xl p-3 bg-yellow-100'>
+    <div className='border-2 border-yellow-500 rounded-3xl p-2 pt-0 pb-2 bg-yellow-100'>
+      <button onClick={onClose} className='ml-2 font-semibold'>X</button>
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={16}

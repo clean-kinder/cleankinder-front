@@ -5,6 +5,7 @@ import HomeHero from "@/components/HomeHero";
 import Head from "next/head";
 
 
+
 const Home: React.FC = () => {
   return (
     <HomeLayout>
