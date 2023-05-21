@@ -3,14 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'ImcreSoojin';
-  font-weight: 400;
+  font-family: 'GmarketSansTTFMedium';
+  font-style: normal;
+  font-weight:400;
   src: url('../../public/fonts/GmarketSansTTFMedium.ttf') format("ttf");
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: 'GmarketSansTTFLight';
+  font-style: normal;
+  font-weight:400;
+  src: url('../../public/fonts/GmarketSansTTFLight.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: 'SUITE';
+  font-weight: 400;
+  src: url('../../public/fonts/SUITE-Variable.ttf') format("ttf");
+}
+
+
+body {
+  font-family: 'GmarketSansTTFMedium';
+}
+
+h1 {
+  font-family: 'GmarketSansTTFLight';
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 .header_right_btn {
   @apply
@@ -42,12 +64,6 @@
   border-color: #333436;
 }
 
-h1 {
-  margin-left: 10px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
 .page-number {
   margin-right: 10px; /* 페이지 번호 사이의 간격을 조정합니다 */
   color: black; /* 일반 페이지 번호의 색상을 설정합니다 */
@@ -71,12 +87,6 @@ h1 {
   }
 }
 
-@font-face {
-  font-family: 'ImcreSoojin';
-  font-weight: 400;
-  src: url('../../public/fonts/GmarketSansTTFMedium.ttf') format("ttf");
-}
-
 .kinder-block {
   @apply flex flex-col rounded-3xl
   border-2 border-yellow-500
@@ -84,7 +94,5 @@ h1 {
   cursor-pointer
 }
 
-body {
-  font-family: 'GmarketSansTTFMedium';
-}
+
 

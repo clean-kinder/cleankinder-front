@@ -91,7 +91,7 @@ const SideNavbar = (props: Props) => {
           <div className="p-6">
             <Link
               href="/map"
-              className="flex items-center text-xl font-semibold text-black hover:text-gray-300"
+              className="flex items-center text-xl font-semibold text-black hover:text-gray-700"
             >
               <RocketIcon class="mr-3" />
               서울시 자치구
