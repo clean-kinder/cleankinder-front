@@ -90,7 +90,7 @@ h1 {
 .kinder-block {
   @apply flex flex-col rounded-3xl
   border-2 border-yellow-500
-  hover:shadow-lg hover:bg-yellow-100
+  hover:shadow-2xl hover:bg-yellow-100
   cursor-pointer
 }
 
