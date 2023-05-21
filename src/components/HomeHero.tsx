@@ -10,15 +10,13 @@ export default function HomeHero() {
                 <br className="hidden lg:inline-block" />
                 </h1>
                 
-                <div className="flex justify-center ml-3">
-                <Link href="/map">
-                        {/* <a className="ml-3 mr-5 hover:text-yellow-500">지도 보기</a> */}
-                        <div className="mr-5 hover:text-yellow-500">지도 보기</div>
+                <div className="flex justify-center">
+                    <Link legacyBehavior href="/map">
+                        <a className="ml-3 mr-5 hover:text-yellow-500">지도 보기</a>
                     </Link>
 
-                    <Link href="/kinder-list/gn">
-                        {/* <a className="mr-5 hover:text-yellow-500">유치원 리스트</a> */}
-                        <div className="mr-5 hover:text-yellow-500">유치원 리스트</div>
+                    <Link legacyBehavior href="/kinder-list/gn">
+                        <a className="mr-5 hover:text-yellow-500">유치원 리스트</a>
                     </Link>
                 </div>
 
