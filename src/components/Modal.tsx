@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
-import { CloseIcon } from "./Icons";
+import React, { useEffect, useState, useRef } from 'react';
+import { GoogleMap, MarkerF } from '@react-google-maps/api';
+
 interface MapProps {
   address: string;
   kinderName: string;
@@ -25,6 +25,23 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
     width: "384px"
   };
 
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        onClose();
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
+  
+
   useEffect(() => {
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo`)
       .then(response => response.json())
@@ -35,12 +52,8 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
       .catch(error => console.error(error));
   }, [address]);
 
-  return (
-    <div className='p-2 pt-0 pb-2 bg-yellow-100 border-2 border-yellow-500 rounded-3xl'>
-      {/* <button onClick={onClose} className='ml-2 font-semibold'>X</button> */}
-      <div onClick={onClose} className='ml-2 font-semibold cursor-pointer'>
-        <CloseIcon class='' />
-      </div>
+  return isOpen ? (
+    <div ref={ref} className='p-3 bg-yellow-100 border-2 border-yellow-500 rounded-3xl'>
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={16}
@@ -62,7 +75,7 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
         </ol>
       </div>
     </div>
-  );
+  ) : null;
 }
 
 export default Modal;
