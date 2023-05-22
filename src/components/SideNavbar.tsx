@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   SmileIcon,
-  ClossIcon,
+  CloseIcon,
   HamburgerIcon,
   ProfileIcon,
   SettingsIcon,

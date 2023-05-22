@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getLocalName } from "./../../utils/localUtils";
 import Modal from "../../components/Modal";
+import FaceColor from "../../components/FaceColor";
 import { LoadScript } from '@react-google-maps/api';
 
 type KinderInfo = {
@@ -87,7 +88,7 @@ const KinderList = () => {
           data[`childSchoolHygiene_${local}`] &&
           data[`childSchoolHygiene_${local}`].row && (
             <>
-              <ul className="grid grid-cols-3 gap-16 grid-auto-rows-auto">
+              <ul className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 grid-auto-rows-auto ">
                 {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
                   <li key={index} className="p-4 m-4 kinder-block" onClick={() => handleModalOpen(kinder)}>
                     <p className="mb-2">
@@ -96,14 +97,16 @@ const KinderList = () => {
                     <p className="mb-2">
                       <strong>주소:</strong> {kinder.ADDR}
                     </p>
-                    <p className="mb-2">
-                      <strong>실내공기질 점검일자:</strong> {kinder.ARQL_CHK_DT}
+                    <p className="flex items-center justify-center mt-2">
+                    <FaceColor
+                      airDay={kinder.ARQL_CHK_DT}
+                      airResult={kinder.ARQL_CHK_RSLT_TP_CD}
+                      washDay={kinder.FXTM_DSNF_CHK_DT}
+                      washResult={kinder.FXTM_DSNF_CHK_RSLT_TP_CD}
+                      jodoDay={kinder.ILMN_CHK_DT}
+                      miniAir={kinder.MDST_CHK_DT}
+                    />
                     </p>
-                    <p className="mb-2">
-                      <strong>실내공기질 점검결과:</strong>{" "}
-                      {kinder.ARQL_CHK_RSLT_TP_CD}
-                    </p>
-                    {/* Add more fields as needed */}
                   </li>
                 ))}
               </ul>
