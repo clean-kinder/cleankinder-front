@@ -49,7 +49,16 @@ const SideNavbar = (props: Props) => {
             </div>
 
             <div>
-              <div>
+                <div className="flex justify-center">
+                    <Link legacyBehavior href="https://e-childschoolinfo.moe.go.kr/">
+                        <a className="ml-3 mr-5 hover:text-yellow-500">유치원알리미</a>
+                    </Link>
+
+                    <Link legacyBehavior href="https://www.sen.go.kr/sen/index.do">
+                        <a className="mr-5 hover:text-yellow-500">서울시교육청</a>
+                    </Link>
+                </div>
+              {/* <div>
                 <button
                   type="button"
                   className="flex text-sm text-black rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -76,7 +85,7 @@ const SideNavbar = (props: Props) => {
                   <SignoutIcon class="mr-2" />
                   Logout
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -101,202 +110,202 @@ const SideNavbar = (props: Props) => {
           <nav className="block pt-3 overflow-auto text-base font-semibold">
             <Link
               href="/kinder-list/gn"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              강남구
+              
+              <h2>강남구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/gd"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              강동구
+              
+              <h2>강동구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/gb"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              강북구
+              
+              <h2>강북구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/gs"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              강서구
+              
+              <h2>강서구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/ga"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              관악구
+              
+              <h2>관악구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/gj"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              광진구
+              
+              <h2>광진구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/gr"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              구로구
+              
+              <h2>구로구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/gc"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              금천구
+              
+              <h2>금천구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/nw"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              노원구
+              
+              <h2>노원구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/db"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              도봉구
+              
+              <h2>도봉구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/dd"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              동대문구
+              
+              <h2>동대문구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/dj"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              동작구
+              
+              <h2>동작구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/mp"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              마포구
+              
+              <h2>마포구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/sm"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              서대문구
+              
+              <h2>서대문구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/sc"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              서초구
+              
+              <h2>서초구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/sd"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              성동구
+              
+              <h2>성동구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/sb"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              성북구
+              
+              <h2>성북구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/sp"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              송파구
+              
+              <h2>송파구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/yc"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              양천구
+              
+              <h2>양천구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/yd"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              영등포구
+              
+              <h2>영등포구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/ys"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              용산구
+              
+              <h2>용산구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/ep"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              은평구
+              
+              <h2>은평구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/jn"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              종로구
+              
+              <h2>종로구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/jg"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              중구
+              
+             <h2> 중구</h2>
             </Link>
             <hr className="border-1" />
             <Link
               href="/kinder-list/jr"
-              className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+              className="flex items-center justify-center py-4 pr-3 opacity-75 hover:opacity-100"
             >
-              <SmileIcon class="mr-3" />
-              중랑구
+              
+              <h2>중랑구</h2>
             </Link>
           </nav>
         </aside>
@@ -311,201 +320,201 @@ const SideNavbar = (props: Props) => {
             <nav className="text-base font-semibold text-white bg-gray-500 ">
               <Link
                 href="/kinder-list/gangnam-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                강남구
+                
+                <h2>강남구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/gangdong-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                강동구
+                
+                <h2>강동구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/gangbuk-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                강북구
+                
+                <h2>강북구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/gangseo-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                강서구
+                
+                <h2>강서구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/gwanak-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                관악구
+                
+                <h2>관악구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/gwangjin-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                광진구
+                
+                <h2>광진구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/guro-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                구로구
+                
+                <h2>구로구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/geumcheon-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                금천구
+                
+                <h2>금천구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/nowon-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                노원구
+                
+                <h2>노원구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/dobong-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                도봉구
+                
+                <h2>도봉구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/dongdaemun-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                동대문구
+                
+                <h2>동대문구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/dongjak-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                동작구
+                
+                <h2>동작구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 마포구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 서대문구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 서초구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 성동구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 성북구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 송파구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 양천구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 영등포구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 용산구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 은평구
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 종로구
               </Link>
               <hr className="border-1" />
               <Link
                 href="/kinder-list/jung-list"
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
-                중구
+                
+               <h2> 중구</h2>
               </Link>
               <hr className="border-1" />
               <Link
                 href=""
-                className="flex items-center py-4 pl-6 opacity-75 hover:opacity-100"
+                className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
-                <SmileIcon class="mr-3" />
+                
                 중랑구
               </Link>
             </nav>

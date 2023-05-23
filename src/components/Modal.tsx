@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { GoogleMap, MarkerF } from '@react-google-maps/api';
+import { CircleCheckIcon } from "./Icons"
 
 interface MapProps {
   address: string;
@@ -63,13 +64,13 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
       </GoogleMap>
       <div className="h-64 p-1 p-3 m-0 bg-yellow-100 w-96">
         <ol>
-          <li className='m-2'><strong>유치원명 :</strong> {kinderName}</li>
-          <li className='m-2'><strong>설립유형 :</strong> {kinderType}</li>
-          <li className='m-2'><strong>실내공기 :</strong> {airDay} / {airResult}</li>
-          <li className='m-2'><strong>정기소독 :</strong> {washDay} / {washResult}</li>
-          <li className='m-2'><strong>조도관리 검사일자 :</strong> {jodoDay}</li>
-          <li className='m-2'><strong>미세먼지 검사일자 :</strong> {miniAir}</li>
-          <li className='m-2'><strong>음용수 종류 (생수/정수/상수도) :</strong> ( {water_1} / {water_2} / {water_3} )</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>유치원명:&nbsp;</strong> {kinderName}</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>설립유형:&nbsp;</strong> {kinderType}</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>실내공기:&nbsp;</strong> {airDay} / {airResult}</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>정기소독:&nbsp;</strong> {washDay} / {washResult}</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>조도관리 검사일자:&nbsp;</strong> {jodoDay}</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>미세먼지 검사일자:&nbsp;</strong> {miniAir}</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>음용수 종류 (생수/정수/상수도):&nbsp;</strong> ( {water_1} / {water_2} / {water_3} )</li>
           <li></li>
           <li></li>
         </ol>

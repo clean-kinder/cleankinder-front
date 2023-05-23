@@ -80,9 +80,9 @@ const KinderList = () => {
       googleMapsApiKey="AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo"
     >
       <div className="h-full overflow-y-auto">
-        <h1>{getLocalName(local as string)}</h1>
+        <h1 className="pt-3 pl-4">{getLocalName(local as string)}</h1>
         {loading ? (
-          <p>Loading data...</p>
+          <p><strong>Loading data...</strong></p>
         ) : (
           data &&
           data[`childSchoolHygiene_${local}`] &&
