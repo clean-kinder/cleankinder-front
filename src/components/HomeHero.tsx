@@ -22,7 +22,7 @@ export default function HomeHero() {
 
             </div>
             {/* <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2"> */}
-            <div className="w-5/6 ml-2">
+            <div className="w-4/6 ml-10">
                 <Animation />
             </div>
         </div>

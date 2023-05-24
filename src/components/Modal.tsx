@@ -70,7 +70,7 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
           <li className='flex m-2'><CircleCheckIcon class='' /><strong>정기소독:&nbsp;</strong> {washDay} / {washResult}</li>
           <li className='flex m-2'><CircleCheckIcon class='' /><strong>조도관리 검사일자:&nbsp;</strong> {jodoDay}</li>
           <li className='flex m-2'><CircleCheckIcon class='' /><strong>미세먼지 검사일자:&nbsp;</strong> {miniAir}</li>
-          <li className='flex m-2'><CircleCheckIcon class='' /><strong>음용수 종류 (생수/정수/상수도):&nbsp;</strong> ( {water_1} / {water_2} / {water_3} )</li>
+          <li className='flex m-2'><CircleCheckIcon class='' /><strong>음용수 종류(생수/정수/상수도):</strong> ( {water_1} / {water_2} / {water_3} )</li>
           <li></li>
           <li></li>
         </ol>
