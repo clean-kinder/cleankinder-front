@@ -55,7 +55,7 @@ const SideNavbar = (props: Props) => {
                     </Link>
 
                     <Link legacyBehavior href="https://e-childschoolinfo.moe.go.kr/">
-                        <a className="ml-3 mr-5 hover:text-yellow-500">유치원알리미</a>
+                        <a className="ml-3 mr-6 hover:text-yellow-500">유치원알리미</a>
                     </Link>
 
                     <Link legacyBehavior href="https://www.sen.go.kr/sen/index.do">
