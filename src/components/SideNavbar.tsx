@@ -50,6 +50,10 @@ const SideNavbar = (props: Props) => {
 
             <div>
                 <div className="flex justify-center">
+                    <Link legacyBehavior href="https://data.seoul.go.kr/">
+                        <a className="mr-5 hover:text-yellow-500">서울열린데이터광장</a>
+                    </Link>
+
                     <Link legacyBehavior href="https://e-childschoolinfo.moe.go.kr/">
                         <a className="ml-3 mr-5 hover:text-yellow-500">유치원알리미</a>
                     </Link>
