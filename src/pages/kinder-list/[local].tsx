@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getLocalName } from "./../../utils/localUtils";
 import Modal from "../../components/Modal";
 import FaceColor from "../../components/FaceColor";
-import { LoadScript } from '@react-google-maps/api';
+import { LoadScriptNext } from '@react-google-maps/api';
 
 type KinderInfo = {
   KINDERNAME: string;
@@ -75,10 +75,11 @@ const KinderList = () => {
   };
 
   return (
-    <LoadScript
+    <LoadScriptNext
       id="script-loader"
       googleMapsApiKey="AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo"
     >
+
       <div className="h-full overflow-y-auto">
         <h1 className="pt-3 pl-4">{getLocalName(local as string)}</h1>
         {loading ? (
@@ -148,7 +149,7 @@ const KinderList = () => {
             </>
           )
         )}
-      </div></LoadScript>
+      </div></LoadScriptNext>
   );
 };
 
