@@ -1,18 +1,7 @@
 import React, { useState } from "react";
 import {
-  SmileIcon,
-  CloseIcon,
   HamburgerIcon,
-  ProfileIcon,
-  SettingsIcon,
-  SignoutIcon,
   RocketIcon,
-  DashboardIcon,
-  TablesIcon,
-  FormsIcon,
-  TabbedContentIcon,
-  CalendarIcon,
-  SupportIcon,
 } from "./Icons";
 import router from "next/router";
 import Link from "next/link";
@@ -62,34 +51,6 @@ const SideNavbar = (props: Props) => {
                         <a className="mr-5 hover:text-yellow-500">서울시교육청</a>
                     </Link>
                 </div>
-              {/* <div>
-                <button
-                  type="button"
-                  className="flex text-sm text-black rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  id="profileBtn"
-                  onClick={() => {
-                    setProfileToggle(!profileToggle);
-                  }}
-                >
-                  <ProfileIcon class={""} />
-                </button>
-              </div>
-
-              <div
-                className={` ${
-                  profileToggle ? "" : "hidden"
-                } origin-top-right absolute right-0 mt-2 w-48
-                                rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5
-                                focus:outline-none cursor-pointer`}
-              >
-                <a
-                  href="#"
-                  className="flex items-center px-4 py-2 text-sm text-gray-700"
-                >
-                  <SignoutIcon class="mr-2" />
-                  Logout
-                </a>
-              </div> */}
             </div>
           </div>
         </div>
@@ -322,7 +283,7 @@ const SideNavbar = (props: Props) => {
           >
             {/* Dropdown Nav */}
             <nav className="text-base font-semibold text-white bg-gray-500 ">
-              <Link
+              {/* <Link
                 href="/kinder-list/gangnam-list"
                 className="flex items-center justify-center py-4 opacity-75 hover:opacity-100"
               >
@@ -519,8 +480,8 @@ const SideNavbar = (props: Props) => {
                 className="flex items-center py-4 opacity-75 hover:opacity-100"
               >
                 
-                중랑구
-              </Link>
+                중랑구 */}
+              {/* </Link> */}
             </nav>
           </header>
           <slot>{props.children}</slot>

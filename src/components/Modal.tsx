@@ -44,7 +44,7 @@ const Modal: React.FC<MapProps> = ({ address, kinderName, kinderType, airDay, ai
   
 
   useEffect(() => {
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo`)
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${process.env.NEXT_PUBLIC_GOOGEL_MAP_KEY}`)
       .then(response => response.json())
       .then(data => {
         const { lat, lng } = data.results[0].geometry.location;

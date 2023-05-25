@@ -18,7 +18,7 @@ const SeoulMap = React.forwardRef<HTMLDivElement, Props>(
     const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
 
     useEffect(() => {
-      mapboxgl.accessToken = "pk.eyJ1IjoiZW1wdHloZWFkIiwiYSI6ImNsaDdyZWgwcjAxZDIza2xvYWFpNWJqb3MifQ.a6Z-GofqDk1-4NYTGx6FbQ";
+      mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
       // mapboxgl.accessToken = process.env.MAPBOX_TOKEN ?? "";
 
       if (!mapContainer.current) {

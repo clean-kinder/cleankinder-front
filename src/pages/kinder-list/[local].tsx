@@ -77,7 +77,7 @@ const KinderList = () => {
   return (
     <LoadScriptNext
       id="script-loader"
-      googleMapsApiKey="AIzaSyDUbTCj82I9-YfIb1OB8WO0lZzCYv5lugo"
+      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGEL_MAP_KEY || ''}
     >
 
       <div className="h-full overflow-y-auto">

@@ -25,7 +25,7 @@ export default async function dataHandler(
     return;
   }
 
-  const url = `http://openapi.seoul.go.kr:8088/437a5263546879753130365154635067/xml/childSchoolHygiene_${data}/1/100/`;
+  const url = `http://openapi.seoul.go.kr:8088/${process.env.NEXT_PULBIC_KINERLIST_KEY}/xml/childSchoolHygiene_${data}/1/100/`;
 
   try {
     const responseData = await fetchData(url);
