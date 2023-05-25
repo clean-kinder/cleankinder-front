@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /usr/src/next
 
-COPY package*.json ./
+COPY *.* /usr/src/next
 
 RUN npm install
 
