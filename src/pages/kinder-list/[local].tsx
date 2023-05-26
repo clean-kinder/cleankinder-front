@@ -89,7 +89,7 @@ const KinderList = () => {
           data[`childSchoolHygiene_${local}`] &&
           data[`childSchoolHygiene_${local}`].row && (
             <>
-              <ul className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 grid-auto-rows-auto ">
+              <ul className="grid gap-16 xgrid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 grid-auto-rows-auto ">
                 {data[`childSchoolHygiene_${local}`].row.map((kinder, index) => (
                   <li key={index} className="p-4 m-4 kinder-block" onClick={() => handleModalOpen(kinder)}>
                     <p className="mb-2">
