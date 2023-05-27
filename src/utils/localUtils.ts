@@ -8,7 +8,6 @@ export const getLocalName = (local: string) => {
       return "강북구";
     case "gs":
       return "강서구";
-
     case "ga":
       return "관악구";
     case "gj":
@@ -17,7 +16,6 @@ export const getLocalName = (local: string) => {
       return "구로구";
     case "gc":
       return "금천구";
-
     case "nw":
       return "노원구";
     case "db":
@@ -35,7 +33,6 @@ export const getLocalName = (local: string) => {
       return "서대문구";
     case "sd":
       return "성동구";
-
     case "sb":
       return "성북구";
     case "sp":
@@ -44,7 +41,8 @@ export const getLocalName = (local: string) => {
       return "양천구";
     case "yd":
       return "영등포구";
-
+    case "ys":
+      return "용산구";
     case "ep":
       return "은평구";
     case "jn":
